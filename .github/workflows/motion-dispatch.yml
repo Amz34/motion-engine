@@ -1,0 +1,83 @@
+name: Enterprise Programmatic Motion Engine
+
+on:
+  workflow_dispatch:
+    inputs:
+      style:
+        description: 'Animation Primitive Style (hologram, stat-chart, teardown, headline, etc.)'
+        required: true
+        default: 'stat-chart'
+        type: choice
+        options:
+          - hologram
+          - ink-doodle
+          - deep-time
+          - blue-grid
+          - neon-silhouette
+          - pov-doodle
+          - map-route
+          - headline
+          - ink-wash
+          - teardown
+          - paper-desk
+          - stat-chart
+      title:
+        description: 'Animation Headline Title'
+        required: true
+        default: 'SYSTEM ARCHITECTURE'
+      subtitle:
+        description: 'Subtitle / Context'
+        required: false
+        default: 'Autonomous Production Node'
+      script:
+        description: 'Core script or body payload'
+        required: true
+        default: 'Rendered with zero After Effects overhead.'
+      format:
+        description: 'Output media format'
+        required: true
+        default: 'gif'
+        type: choice
+        options:
+          - gif
+          - mp4
+          - png
+
+jobs:
+  render:
+    name: Programmatic Frame Render
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Execute Autonomous Render
+        run: |
+          python3 ops/scripts/animation_skills_engine.py \
+            --style "${{ github.event.inputs.style }}" \
+            --title "${{ github.event.inputs.title }}" \
+            --subtitle "${{ github.event.inputs.subtitle }}" \
+            --script "${{ github.event.inputs.script }}" \
+            --format "${{ github.event.inputs.format }}" \
+            --output "artifacts/render_${{ github.event.inputs.style }}.${{ github.event.inputs.format }}"
+
+      - name: Upload Output Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: motion-graphic-${{ github.event.inputs.style }}
+          path: artifacts/*
