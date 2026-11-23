@@ -96,3 +96,7 @@ Ultra-Compact 9:16 GIF / MP4 Video (< 250 KB)
 
 ## 📜 License
 MIT License. Authored by [Aamir Zameer [Az.]](https://github.com/Amz34).
+
+---
+
+Part of [my always-on agent stack](https://github.com/Amz34) · [Awesome Agent Infrastructure](https://github.com/Amz34/awesome-agent-infrastructure) (135 live-checked building blocks).
