@@ -3,8 +3,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Engine: Playwright + GSAP](https://img.shields.io/badge/Engine-Playwright%20%2B%20GSAP%203-emerald.svg)](https://playwright.dev)
 [![Encoder: FFmpeg 2--Pass Palette](https://img.shields.io/badge/Encoder-FFmpeg%202--Pass-cyan.svg)](https://ffmpeg.org)
+[![Architecture](https://img.shields.io/badge/Architecture-12_Primitives-58a6ff.svg)](assets/architecture-overview.svg)
 
 An enterprise-grade, code-driven motion graphics engine that replaces Adobe After Effects with **12 procedural animation primitives**. It translates raw technical scripts, architecture diagrams, and growth metrics into frame-accurate, scroll-stopping **9:16 vertical animations, palette-optimized GIFs, and H.264 MP4 videos** in seconds.
+
+---
+
+## 🏛 System Topology
+
+![Motion Engine Architecture](assets/architecture-overview.svg)
 
 ---
 

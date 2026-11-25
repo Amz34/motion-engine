@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: #0d1117; }
+      .box { fill: #161b22; stroke: #30363d; stroke-width: 1.5; rx: 8px; }
+      .box-highlight { fill: #161b22; stroke: #58a6ff; stroke-width: 2; rx: 8px; }
+      .title { fill: #58a6ff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: 600; }
+      .label { fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: 500; }
+      .subtext { fill: #8b949e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; }
+      .code { fill: #79c0ff; font-family: "SFMono-Regular", Consolas, monospace; font-size: 11px; }
+      .arrow { stroke: #58a6ff; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .badge-green { fill: #238636; }
+      .badge-blue { fill: #1f6feb; }
+      .badge-purple { fill: #8957e5; }
+      .badge-text { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 10px; font-weight: 600; text-anchor: middle; }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#58a6ff" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="480" class="bg" rx="12" />
+
+  <text x="40" y="45" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700">Motion Engine: 12-Primitive Programmatic Animation Architecture</text>
+  <text x="40" y="68" fill="#8b949e" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Replacing Heavy After Effects Workstations with Headless Chromium, GSAP 3, and 2-Pass Palette FFmpeg Encoding</text>
+
+  <!-- Stage 1 -->
+  <g transform="translate(40, 100)">
+    <rect width="270" height="330" class="box" />
+    <rect x="15" y="15" width="70" height="18" rx="4" class="badge-blue" />
+    <text x="50" y="27" class="badge-text">STAGE 1</text>
+    <text x="15" y="55" class="title">12 Primitive Styles</text>
+    <text x="15" y="75" class="subtext">Procedural Animation Canvas</text>
+
+    <rect x="15" y="95" width="240" height="70" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="115" class="label">Narrative Primitives</text>
+    <text x="25" y="132" class="subtext">• /hologram, /ink-doodle, /deep-time</text>
+    <text x="25" y="147" class="subtext">• /blue-grid, /neon-silhouette, /pov</text>
+
+    <rect x="15" y="175" width="240" height="70" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="195" class="label">Growth Primitives</text>
+    <text x="25" y="212" class="subtext">• /map-route, /headline, /ink-wash</text>
+    <text x="25" y="227" class="subtext">• /teardown, /paper-desk, /stat-chart</text>
+
+    <rect x="15" y="255" width="240" height="55" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="275" class="label">DOM &amp; SVG Compositor</text>
+    <text x="25" y="292" class="code">GSAP 3 timeline orchestration</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <path d="M 310 250 L 350 250" class="arrow" />
+
+  <!-- Stage 2 -->
+  <g transform="translate(360, 100)">
+    <rect width="280" height="330" class="box-highlight" />
+    <rect x="15" y="15" width="70" height="18" rx="4" class="badge-purple" />
+    <text x="50" y="27" class="badge-text">STAGE 2</text>
+    <text x="15" y="55" class="title">Headless Chromium V8</text>
+    <text x="15" y="75" class="subtext">Frame-Accurate Capture Pool</text>
+
+    <rect x="15" y="95" width="250" height="75" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="115" class="label">Deterministic Stepping</text>
+    <text x="25" y="132" class="subtext">• 60 FPS frame-by-frame export</text>
+    <text x="25" y="147" class="subtext">• Zero dropped frames or jitter</text>
+
+    <rect x="15" y="180" width="250" height="75" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="200" class="label">Ultra-Fast Render Speed</text>
+    <text x="25" y="218" class="code">Latency: 17.8 seconds</text>
+    <text x="25" y="235" class="subtext">• 95% faster than Adobe After Effects</text>
+
+    <rect x="15" y="265" width="250" height="45" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="285" class="label">Cloud &amp; CI Native</text>
+    <text x="25" y="298" class="subtext">• Runs on headless Linux ARM64 / x86</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <path d="M 640 250 L 680 250" class="arrow" />
+
+  <!-- Stage 3 -->
+  <g transform="translate(690, 100)">
+    <rect width="270" height="330" class="box" />
+    <rect x="15" y="15" width="70" height="18" rx="4" class="badge-green" />
+    <text x="50" y="27" class="badge-text">STAGE 3</text>
+    <text x="15" y="55" class="title">2-Pass Palette FFmpeg</text>
+    <text x="15" y="75" class="subtext">Zero-Bloat Encoding</text>
+
+    <rect x="15" y="95" width="240" height="70" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="115" class="label">Custom Color Palette</text>
+    <text x="25" y="132" class="subtext">• Palettegen statistical analysis</text>
+    <text x="25" y="147" class="subtext">• Dithering optimization</text>
+
+    <rect x="15" y="175" width="240" height="70" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="195" class="label">Ultra-Compact Output</text>
+    <text x="25" y="212" class="code">Size: &lt; 250 KB (GIF) / MP4</text>
+    <text x="25" y="227" class="subtext">• 96% smaller payload</text>
+
+    <rect x="15" y="255" width="240" height="55" rx="6" fill="#21262d" stroke="#30363d" />
+    <text x="25" y="275" class="label">Multi-Channel Distribution</text>
+    <text x="25" y="292" class="subtext">• 9:16 vertical, LinkedIn, Web</text>
+  </g>
+</svg>
